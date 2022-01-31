@@ -1,3 +1,15 @@
+for _, gui in pairs(game:GetService("CoreGui").RobloxGui:GetChildren()) do
+   if gui:IsA("ScreenGui") and string.match(gui.Name, "_Secretkey101") then
+       gui:Destroy()
+   end
+end
+
+for _, gui in pairs(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):GetChildren()) do
+   if gui:IsA("ScreenGui") and string.match(gui.Name, "_Secretkey101") then
+       gui:Destroy()
+   end
+end
+
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
@@ -213,7 +225,7 @@ do
 	
 	function library.new(title)
 		local container = utility:Create("ScreenGui", {
-			Name = title,
+			Name = tostring(math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9)..math.random(0, 9).."_Secretkey101"),
 			Parent = game.CoreGui
 		}, {
 			utility:Create("ImageLabel", {
